@@ -76,7 +76,7 @@ async function logout() {
 
 
 <template>
-  <div class="container-fluid d-flex">
+  <div class="container-fluid d-flex" id="user">
     <div class="row">
 
       <div class="col-6 left">

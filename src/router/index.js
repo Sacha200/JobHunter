@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import CandidaciesView from '../views/CandidaciesView.vue'
 import FormCandidate from '../views/FormCandidate.vue'
+import CandidaciesSingle from '../views/CandidaciesSingle.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,12 @@ const router = createRouter({
       path: "/candidacy",
       name: "candidacy",
       component: CandidaciesView
+    }, 
+    
+    {
+      path: "/candidacy-single/:idCandidacies",
+      name: "candidacy-single",
+      component: CandidaciesSingle,
     },
 
     {

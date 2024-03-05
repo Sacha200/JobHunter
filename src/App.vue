@@ -9,33 +9,52 @@ const userInfo = computed (() =>{
 
 <template>
   <header>
-    
-    <nav class="navbar navbar-expand-lg bg-secondary">
-        <div class="">
-          <RouterLink class="navbar-brand" to="/">Home</RouterLink>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <RouterLink class="nav-link" to="/about">About</RouterLink>
 
-              </li>
-              <li class="nav-item">
-                <RouterLink v-if="userInfo == null" to="/login">Login</RouterLink>
-                <span v-else>{{ userInfo.name }}</span>
-              </li>
+    <nav class="navbar navbar-expand-lg bg-secondary d-flex align-items-center header">
+      <div class="container-fluid">
 
-            </ul>
-            
+        <a class="navbar-brand" href="#">
+          <RouterLink class="navbar-brand" to="/">
+
+            JOB<strong>Hunter</strong>
+          </RouterLink>
+        </a>
+
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+
+
+            <!-- <li class="nav-item">
+             Login
+            </li> -->
+
+          </ul>
+
+        </div>
+        <div class="dropdown">
+
+          <button class="btn btn-primary profile dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Mon compte</button>
+
+          <ul class="dropdown-menu">
+            <li>
+              <RouterLink class="nav-link" v-if="userInfo == null" to="/login"><a class="dropdown-item" href="#">Mon
+                  profil</a></RouterLink>
+            </li>
+            <li>
+              <RouterLink class="nav-link" v-if="userInfo == null" to="/candidacy"><a class="dropdown-item" href="#">Mes
+                  candidatures</a></RouterLink>
+            </li>
+
+          </ul>
+        </div>
+
       </div>
-    </div>
-  </nav>
+    </nav>
   </header>
   <main class="container">
 
-  <RouterView/>
+    <RouterView />
   </main>
 </template>

@@ -18,20 +18,25 @@ class Candidacy {
         return response.data;
     }
 
-    async create(entreprise, url, id_state, description, date) {
+    async create(entreprise, url, image, title, location, date, description, releasedAt, suivi) {
         const response = await instance.get(`/candidacy/`, {
             entreprise: entreprise,
             url: url,
-            id_state: id_state,
+            title: title,
+            location: location,
             date: date,
+            image: image,
             description: description,
+            releasedAt: releasedAt,
+            suivi: suivi,
+            
         });
         return response.data;
     }
 
 
-    async candidacyGetOne(id) {
-        const response = await instance.post(`/candidacy/` + id, {
+    async getOne(id) {
+        const response = await instance.get(`/candidacy/` + id, {
 
         });
         return response.data;

@@ -21,19 +21,18 @@ const props = defineProps({
     <!-- <pre>{{ site }}</pre> -->
 
 
-    <div class="card mb-3" style="max-width: 800px;">
-      <div class="row g-0">
+    <div class="card mb-5 siteslist" style="max-width: 800px; height: 200px;">
+      <div class="row g-2 text-center   ">
         <div class="col-md-3">
             <RouterLink :to="`/website/${site.id_websites}`">
-                <img :src="site.image[0].signedUrl" class="img-fluid" />
+                <img  :src="site.image[0].signedUrl" class="img-fluid  p-4" id="site_logo" />
             </RouterLink>  
         </div>      
         <div class="col-md-9">
-          <div class="card-body">
+          <div class="card-body text-start">
             <h5 class="card-title">{{ site.title }}</h5>
             <p class="card-text">{{ site.description }}</p>
-            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-          </div>
+            <p><a class="link-offset-2 link-underline link-underline-opacity-100" href="#"> voir site</a></p>          </div>
         </div>
       </div>
         </div>

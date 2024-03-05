@@ -1,18 +1,30 @@
 $secondary : rgb(255, 255, 255);
 
 
-
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 body{
   background: #ECFBFF;
 }
-nav {
+.header {
     border-bottom: 3px solid #04364A;
 
 }
 
-.container-fluid {
+.profile{
+  background-color: #04364A;
+  width: 160px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.profile:hover {
+    background-color: #176B87;
+
+}
+
+#user {
   height: 100vh;
+  width: 100vw;
 }
 
 #create{
@@ -52,7 +64,6 @@ h2{
   width: 590px;
   height: 40px;
   border: solid #176B87 2px;
-  border-radius: 8px;
   background-color: transparent;
 }
 
@@ -60,17 +71,117 @@ h2{
   background-color: #DBF2F8;
 }
 
-// .col-6{
-  
-//   height: 100%;
-// }
+
 
 .col-6 img{
   margin-top: 50%;
 }
 
 .right{
-  margin-top: 50%;
-  margin-left: 20%;
+  margin-top: 30%;
+  
 }
+
+.siteslist{
+  background-color: #D0ECF4;
+}
+#site_logo{
+  padding: 2.5rem !important;
+}
+
+
+// Candidatures
+
+.title_candidacy{
+  color: #04364A;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 3%;
+
+}
+
+.link{
+  color: #04364A !important;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 20px;
+  justify-content: space-around ;
+}
+.line {
+  color: #1594bf;
+  width: 130%;
+  margin-top: -21px;
+}
+
+.ps-5 {
+  margin-left: 3rem;
+}
+
+.ms-5{
+    margin-left: 9rem !important;
+}
+
+.listcandidacy {
+  display: grid;
+  gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    border: none;
+}
+
+.card{
+  border-radius: 0;
+  background-color: #D0ECF4;
+  box-shadow: 0 0 6px rgba(26, 25, 25, 0.2);
+}
+.card img{
+  border-radius: 0;
+  height: 200px;
+  border: solid #04364A 2px;
+
+}
+.card h5{
+  color: #04364A;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+}
+.card p{
+  color: #04364A;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+
+}
+
+
+
+.onload {
+  color: #936630;
+  border: solid #936630 1px;
+  background-color: #F3D9B2;
+  width: 80px;
+  height: 28px;
+  padding-inline-start: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+#addcandidacy {
+  color: #04364A;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-style: none;
+  background-color: transparent;
+}
+
+
 

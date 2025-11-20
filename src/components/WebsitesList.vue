@@ -37,10 +37,5 @@ const props = defineProps({
       </div>
         </div>
 
-    <!-- <div class="row mb-5">
-            <div class="col-7 w-50">
-               
-            
-                </div>
-                </div> -->
+    
 </template>

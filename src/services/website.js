@@ -29,12 +29,7 @@ class Website {
     }
 
 
-    // async websiteGetOne(id) {
-    //     const response = await instance.post(`/website/` + id, {
-
-    //     });
-    //     return response.data;
-    // }
+    
 }
 
 

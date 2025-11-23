@@ -22,12 +22,21 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1 class="m-3">Des sites pro <br />pour un<strong> avenir pro.</strong></h1>
+  <section class="websites-section">
+    <div class="section-header">
+      <p class="eyebrow">RESSOURCES UTILES</p>
+      <h1>
+        Des sites pro<br />
+        pour un <strong>avenir pro.</strong>
+      </h1>
+    </div>
 
-  <template v-for="site in websites">
-    <WebsitesList :site="site" />
-    </template>
-
-    
-
+    <div class="websites-grid">
+      <template v-for="site in websites" :key="site.id_websites">
+        <WebsitesList :site="site" />
+      </template>
+    </div>
+  </section>
 </template>
+
+<style scoped src="@/assets/styles/home.scss"></style>

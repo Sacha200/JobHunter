@@ -1,0 +1,96 @@
+.websites-section {
+  padding: 3rem 0 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.websites-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.website-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2.5rem 2.25rem;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+}
+
+.website-card .card-body {
+  padding: 0;
+}
+
+.site-logo {
+  background: var(--color-soft);
+  border-radius: 26px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.site-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.website-card .card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.website-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+}
+
+.card-link {
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+  .websites-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .website-card {
+    min-height: 360px;
+    padding: 2.25rem 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .websites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .websites-section {
+    padding-inline: 1rem;
+  }
+}
+
+

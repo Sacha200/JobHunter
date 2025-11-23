@@ -76,38 +76,45 @@ async function logout() {
 
 
 <template>
-  <div class="container-fluid d-flex" id="user">
-    <div class="row">
-
-      <div class="col-6 left">
-        <img src="/src/assets/img/img1.png" alt="">
+  <section id="user">
+    <div class="auth-layout">
+      <div class="auth-visual">
+        <img src="/src/assets/img/img1.png" alt="Illustration JobHunter">
       </div>
 
-      <div class="col-6">
-        <div class="right px-3">
+      <div class="auth-panel">
+        <p class="eyebrow">CRÉEZ VOTRE COMPTE</p>
+        <h1 id="welcome">Welcome to Job<strong>Hunter</strong></h1>
+        
+        <div v-if="error" class="auth-message error">ERREUR : {{ error }}</div>
+        <div v-if="success" class="auth-message success">SUCCESS : {{ success }}</div>
 
+        <form class="account auth-form" @submit.prevent>
+          <label class="form-field">
+            <span>Nom</span>
+            <input type="text" v-model="form.name" placeholder="Votre nom" />
+          </label>
+          <label class="form-field">
+            <span>Email</span>
+            <input type="email" v-model="form.email" placeholder="ex: sacha@email.com" />
+          </label>
+          <label class="form-field">
+            <span>Mot de passe</span>
+            <input type="password" v-model="form.password" placeholder="••••••••" />
+          </label>
 
-          <h1 id="welcome">Welcome to Job<strong class="fw-bold">Hunter</strong></h1>
-          <h2 class="fs-6 fw-semibold">Créez votre compte</h2>
-          <p v-if="error">ERREUR : {{ error }}</p>
-          <p v-if="success">SUCCESS : {{ success }}</p>
-
-          <div class="account">
-            <p>nom <input type="text" v-model="form.name" /></p>
-            <p>email <input type="text" v-model="form.email" /></p>
-            <p>password <input type="password" v-model="form.password" /></p>
-
-
-            <button class="fw-semibold" id="create" @click="createAccount">S'inscrire</button>
-              <button class="fw-semibold" id="login" @click="login">Se connecter</button>
-
-              
+          <div class="auth-actions">
+            <button type="button" class="btn btn-primary fw-semibold" @click="createAccount">
+              S'inscrire
+            </button>
+            <button type="button" class="btn btn-outline fw-semibold" @click="login">
+              Se connecter
+            </button>
           </div>
-        </div>
+        </form>
       </div>
-
     </div>
-  </div>
+  </section>
 </template>
 
-<style></style>
+<style scoped src="@/assets/styles/login.scss"></style>

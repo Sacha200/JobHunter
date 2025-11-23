@@ -9,8 +9,7 @@ const userInfo = computed (() =>{
 
 <template>
   <header>
-
-    <nav class="navbar navbar-expand-lg bg-secondary d-flex align-items-center header">
+    <nav class="navbar navbar-expand-lg d-flex align-items-center header">
       <div class="container-fluid">
 
         <a class="navbar-brand" href="#">
@@ -33,20 +32,26 @@ const userInfo = computed (() =>{
 
         </div>
         <div class="dropdown">
+          <button
+            class="btn btn-primary profile dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Mon compte
+          </button>
 
-          <button class="btn btn-primary profile dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">Mon compte</button>
-
-          <ul class="dropdown-menu">
-            <li>
-              <RouterLink class="nav-link" v-if="userInfo == null" to="/login"><a class="dropdown-item" href="#">Mon
-                  profil</a></RouterLink>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li v-if="!userInfo">
+              <RouterLink class="dropdown-item" to="/login">
+                Se connecter / Créer un compte
+              </RouterLink>
             </li>
-            <li>
-              <RouterLink class="nav-link" v-if="userInfo == null" to="/candidacy"><a class="dropdown-item" href="#">Mes
-                  candidatures</a></RouterLink>
+            <li v-else>
+              <RouterLink class="dropdown-item" to="/candidacy">
+                Mes candidatures
+              </RouterLink>
             </li>
-
           </ul>
         </div>
 
